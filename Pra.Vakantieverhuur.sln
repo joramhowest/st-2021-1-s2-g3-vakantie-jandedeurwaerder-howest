@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pra.Vakantieverhuur.WPF", "Pra.Vakantieverhuur.WPF\Pra.Vakantieverhuur.WPF.csproj", "{761E346D-278E-45EB-AA86-E42F7E26CD5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pra.Vakantieverhuur.CORE", "Pra.Vakantieverhuur.CORE\Pra.Vakantieverhuur.CORE.csproj", "{92C30875-44F6-4741-8064-DA0AD065580A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{761E346D-278E-45EB-AA86-E42F7E26CD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761E346D-278E-45EB-AA86-E42F7E26CD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761E346D-278E-45EB-AA86-E42F7E26CD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761E346D-278E-45EB-AA86-E42F7E26CD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C30875-44F6-4741-8064-DA0AD065580A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C30875-44F6-4741-8064-DA0AD065580A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C30875-44F6-4741-8064-DA0AD065580A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C30875-44F6-4741-8064-DA0AD065580A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FAB19C6-F3EF-481A-9C99-68A832F1FFC8}
+	EndGlobalSection
+EndGlobal
