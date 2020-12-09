@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pra.Vakantieverhuur.WPF"
         mc:Ignorable="d"
-        Title="Verhuur" Height="450" Width="800">
+        Title="Verhuur" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <GroupBox x:Name="grpVerblijf" Header="Verblijf" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="264" IsEnabled="False">
             <Grid>
@@ -34,9 +34,9 @@
         <Label Content="Huurder : " HorizontalAlignment="Left" Height="26" Margin="292,23,0,0" VerticalAlignment="Top" Width="90"/>
         <ComboBox x:Name="cmbTenant" HorizontalAlignment="Left" Height="26" Margin="416,23,0,0" VerticalAlignment="Top" Width="284"/>
         <Label Content="Startdatum : " HorizontalAlignment="Left" Height="26" Margin="292,64,0,0" VerticalAlignment="Top" Width="90"/>
-        <DatePicker x:Name="dtpDateStart" HorizontalAlignment="Left" Height="26" Margin="416,64,0,0" VerticalAlignment="Top" Width="284" />
+        <DatePicker x:Name="dtpDateStart" HorizontalAlignment="Left" Height="26" Margin="416,64,0,0" VerticalAlignment="Top" Width="284"  SelectedDateChanged="dtpDateStart_SelectedDateChanged"/>
         <Label Content="Einddatum : " HorizontalAlignment="Left" Height="26" Margin="292,95,0,0" VerticalAlignment="Top" Width="90"/>
-        <DatePicker x:Name="dtpDateEnd" HorizontalAlignment="Left" Height="26" Margin="416,96,0,0" VerticalAlignment="Top" Width="284" />
+        <DatePicker x:Name="dtpDateEnd" HorizontalAlignment="Left" Height="26" Margin="416,96,0,0" VerticalAlignment="Top" Width="284" SelectedDateChanged="dtpDateEnd_SelectedDateChanged"/>
         <Button x:Name="btnTenants" Content="..." HorizontalAlignment="Left" Height="26" Margin="708,23,0,0" VerticalAlignment="Top" Width="37"/>
         <Label Content="Te betalen : " HorizontalAlignment="Left" Height="26" Margin="297,225,0,0" VerticalAlignment="Top" Width="90"/>
         <Label x:Name="lblTotalToPay" Content="-" HorizontalAlignment="Left" Height="26" Margin="457,225,0,0" VerticalAlignment="Top" Width="100"/>
@@ -45,8 +45,8 @@
         <Label Content="Nog te betalen : " HorizontalAlignment="Left" Height="26" Margin="297,287,0,0" VerticalAlignment="Top" Width="90"/>
         <Label x:Name="lblToBePaid" Content="-" HorizontalAlignment="Left" Height="26" Margin="457,287,0,0" VerticalAlignment="Top" Width="100"/>
         <CheckBox x:Name="chkDepositPaid" Content="Waarborg betaald" HorizontalAlignment="Left" Height="23" Margin="297,325,0,0" VerticalAlignment="Top" Width="224"/>
-        <Button x:Name="btnSave" Content="Bewaren" HorizontalAlignment="Left" Height="42" Margin="297,361,0,0" VerticalAlignment="Top" Width="121" />
-        <Button x:Name="btnCancel" Content="Annuleren" HorizontalAlignment="Left" Height="42" Margin="439,361,0,0" VerticalAlignment="Top" Width="121" />
+        <Button x:Name="btnSave" Content="Bewaren" HorizontalAlignment="Left" Height="42" Margin="297,361,0,0" VerticalAlignment="Top" Width="121" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel" Content="Annuleren" HorizontalAlignment="Left" Height="42" Margin="439,361,0,0" VerticalAlignment="Top" Width="121" Click="btnCancel_Click"/>
         <Label Content="Aantal overnachtingen : " HorizontalAlignment="Left" Height="26" Margin="297,194,0,0" VerticalAlignment="Top" Width="155"/>
         <Label x:Name="lblNumberOfOvernightStays" Content="-" HorizontalAlignment="Left" Height="26" Margin="457,194,0,0" VerticalAlignment="Top" Width="155"/>
         <Label Content="OVERBOEKING : " HorizontalAlignment="Left" Height="26" Margin="297,149,0,0" VerticalAlignment="Top" Width="155"/>

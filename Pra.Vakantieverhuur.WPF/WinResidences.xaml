@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pra.Vakantieverhuur.WPF"
         mc:Ignorable="d"
-        Title="Verblijf" Height="501" Width="712"  WindowStartupLocation="CenterScreen">
+        Title="Verblijf" Height="501" Width="712"  WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <GroupBox x:Name="grpData" Header="Gegevens" HorizontalAlignment="Left" Height="399" Margin="10,61,0,0" VerticalAlignment="Top" Width="684">
             <Grid>
@@ -19,7 +19,7 @@
                 <Label Content="Verminderde prijs : " HorizontalAlignment="Left" Height="26" Margin="10,220,0,0" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2"/>
                 <Label Content="Aantal dagen basisprijs : " HorizontalAlignment="Left" Height="26" Margin="10,251,0,0" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2"/>
                 <Label Content="Waarborg : " HorizontalAlignment="Left" Height="26" Margin="10,282,0,0" VerticalAlignment="Top" Width="142" Grid.ColumnSpan="2"/>
-                <ComboBox x:Name="cmbKindOfResidence" HorizontalAlignment="Left" Height="23" Margin="117.455,12,0,0" VerticalAlignment="Top" Width="238" SelectedIndex="0"  Grid.Column="1">
+                <ComboBox x:Name="cmbKindOfResidence" HorizontalAlignment="Left" Height="23" Margin="117.455,12,0,0" VerticalAlignment="Top" Width="238" SelectedIndex="0"  Grid.Column="1" SelectionChanged="cmbKindOfResidence_SelectionChanged">
                     <ComboBoxItem Content="Vakantiehuisjes"/>
                     <ComboBoxItem Content="Caravans"/>
                 </ComboBox>
@@ -44,8 +44,8 @@
             </Grid>
         </GroupBox>
         <Label x:Name="lblTitle" Content="-hier komt titel-" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="165"/>
-        <Button x:Name="btnSave" Content="Bewaren" HorizontalAlignment="Left" Height="28" Margin="210,10,0,0" VerticalAlignment="Top" Width="118" />
-        <Button x:Name="btnCancel"  Content="Annuleren" HorizontalAlignment="Left" Height="28" Margin="343,10,0,0" VerticalAlignment="Top" Width="129" />
+        <Button x:Name="btnSave" Content="Bewaren" HorizontalAlignment="Left" Height="28" Margin="210,10,0,0" VerticalAlignment="Top" Width="118" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel"  Content="Annuleren" HorizontalAlignment="Left" Height="28" Margin="343,10,0,0" VerticalAlignment="Top" Width="129" Click="btnCancel_Click"/>
 
     </Grid>
 </Window>

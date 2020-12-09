@@ -5,45 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pra.Vakantieverhuur.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="982.582">
+        Title="MainWindow" Height="450" Width="982.582" Loaded="Window_Loaded">
     <Grid>
         <GroupBox Header="Verblijven" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="271">
             <Grid>
-                <ListBox x:Name="lstResidences" HorizontalAlignment="Left" Height="298" Margin="10,68,0,0" VerticalAlignment="Top" Width="239"/>
-                <ComboBox x:Name="cmbKindOfResidence" HorizontalAlignment="Left" Height="23" Margin="11,40,0,0" VerticalAlignment="Top" Width="238" SelectedIndex="0" >
+                <ListBox x:Name="lstResidences" HorizontalAlignment="Left" Height="298" Margin="10,68,0,0" VerticalAlignment="Top" Width="239" SelectionChanged="lstResidences_SelectionChanged"/>
+                <ComboBox x:Name="cmbKindOfResidence" HorizontalAlignment="Left" Height="23" Margin="11,40,0,0" VerticalAlignment="Top" Width="238" SelectedIndex="0" SelectionChanged="cmbKindOfResidence_SelectionChanged" >
                     <ComboBoxItem Content="Alle verblijven"/>
                     <ComboBoxItem Content="Vakantiehuisjes"/>
                     <ComboBoxItem Content="Caravans"/>
                 </ComboBox>
-                <Button x:Name="btnResidenceNew" Content="New" HorizontalAlignment="Left" Height="25" Margin="11,10,0,0" VerticalAlignment="Top" Width="56"/>
-                <Button x:Name="btnResidenceEdit"  Content="Edit" HorizontalAlignment="Left" Height="25" Margin="72,10,0,0" VerticalAlignment="Top" Width="56"/>
-                <Button x:Name="btnResidenceDelete"  Content="Delete" HorizontalAlignment="Left" Height="25" Margin="133,10,0,0" VerticalAlignment="Top" Width="56" />
+                <Button x:Name="btnResidenceNew" Content="New" HorizontalAlignment="Left" Height="25" Margin="68,10,0,0" VerticalAlignment="Top" Width="56" Click="btnResidenceNew_Click"/>
+                <Button x:Name="btnResidenceEdit"  Content="Edit" HorizontalAlignment="Left" Height="25" Margin="129,10,0,0" VerticalAlignment="Top" Width="56" Click="btnResidenceEdit_Click"/>
+                <Button x:Name="btnResidenceDelete"  Content="Delete" HorizontalAlignment="Left" Height="25" Margin="190,10,0,0" VerticalAlignment="Top" Width="56" Click="btnResidenceDelete_Click" />
+                <Button x:Name="btnResidenceView" Content="View" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Click="btnResidenceView_Click"/>
 
             </Grid>
         </GroupBox>
         <GroupBox  x:Name="grpVerhuur" Header="Verhuur" HorizontalAlignment="Left" Height="399" Margin="286,10,0,0" VerticalAlignment="Top" Width="679">
             <Grid>
-                <Button x:Name="btnNewRental" Content="Nieuw verhuur" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" />
+                <Button x:Name="btnNewRental" Content="Nieuw verhuur" HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" Click="btnNewRental_Click" />
                 <DataGrid x:Name="dgrRentals" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="299" Margin="10,68,0,0" VerticalAlignment="Top" Width="647">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Van" Binding="{Binding DateStart, StringFormat=\{0:dd/MM/yyyy\}}" />
                         <DataGridTextColumn Header="Tot" Binding="{Binding DateEnd, StringFormat=\{0:dd/MM/yyyy\}}" />
                         <DataGridTextColumn Header="Naam" Binding="{Binding HolidayTenant.Name}" />
-                        <DataGridTextColumn Header="Voornaam" Binding="{Binding HolidayTenant.Firstname}" />
+                        <DataGridTextColumn Header="Voornaam" Binding="{Binding HolidayTenant.FirstName}" />
                         <DataGridTextColumn Header="Te betalen" Binding="{Binding ToPay}" />
                         <DataGridTextColumn Header="Reeds betaald" Binding="{Binding Paid}" />
                         <DataGridTextColumn Header="Waarborg voldaan" Binding="{Binding IsDepositPaid}" />
                         <DataGridTemplateColumn>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="btnRentalEdit" Height="30" >Bewerk</Button>
+                                    <Button x:Name="btnRentalEdit" Height="30"  Click="btnRentalEdit_Click" >Bewerk</Button>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                         <DataGridTemplateColumn>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button x:Name="btnRentalDelete"  Height="30" >Wis</Button>
+                                    <Button x:Name="btnRentalDelete"  Height="30" Click="btnRentalDelete_Click">Wis</Button>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
